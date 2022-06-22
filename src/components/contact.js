@@ -1,8 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef ,useContext} from 'react';
 import { css } from '@emotion/react';
 import { useThemeContext } from '../contexts/ThemeContext';
 import { postFormData } from '../api/helper';
 import useAnalyticsEventTracker from '../api/analytics';
+import { LanguageContext } from '../containers/Language';
 
 const ContactStyle = (colors, isLight) => css`
   .form {
@@ -61,6 +62,7 @@ const ContactStyle = (colors, isLight) => css`
 `;
 
 const ContactForm = () => {
+  const { dictionary } = useContext(LanguageContext);
   const firstNameRef = useRef(null);
   const lastNameRef = useRef(null);
   const emailRef = useRef(null);
@@ -97,29 +99,29 @@ const ContactForm = () => {
           <div className="fieldset">
             <input type="text" name="firstName" className="input" tabIndex="1" ref={firstNameRef} />
             <label className="input-label" htmlFor="firstName">
-              First name
+              {dictionary.fName}
             </label>
           </div>
           <div className="fieldset">
             <input type="text" name="lastName" className="input" tabIndex="2" ref={lastNameRef} />
             <label className="input-label" htmlFor="lastName">
-              Last name
+              {dictionary.name}
             </label>
           </div>
           <div className="fieldset">
             <input type="email" name="email" id="email" className="input" tabIndex="3" ref={emailRef} />
             <label className="input-label" htmlFor="email">
-              Email
+              {dictionary.email}
             </label>
           </div>
           <div className="fieldset">
             <textarea className="input" name="message" ref={messageRef} rows={7} />
             <label className="input-label" htmlFor="message">
-              Message
+              {dictionary.msg}
             </label>
           </div>
           <button onClick={() => gaEventTracker('send contact')} className="send-btn" type="submit">
-            Send
+            {dictionary.send}
           </button>
         </div>
       </form>

@@ -1,34 +1,53 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { css } from '@emotion/react';
 import ContactForm from '../components/contact';
-import MetaTags from 'react-meta-tags';
 import JoinIcon from '../assets/join.svg';
+import Logo from '../components/logo';
+import { useDate } from '../common/date';
+import {LanguageContext } from '../containers/Language';
+
+
 
 const ContactPageStyle = css`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+
+.logo{
+  display:none;
+}
 `;
 
 const ContactPage = () => {
+
+  const { wish, date, time } = useDate('en');
+
+  const { dictionary } = useContext(LanguageContext);
+
   return (
     <React.Fragment>
-      <MetaTags>
-        <title>Contact Us | IT-BAHN &copy;</title>
-      </MetaTags>
       <div css={[ContactPageStyle]}>
-        <h1 className="title text-focus-in">Contact Us</h1>
+    
+      <div className='App-header'>
+      <Logo time={time} date={date}></Logo>
+      <h1 className="text-focus-in">{wish}</h1>
+      </div>
+     
         <div
           style={{
             backgroundImage: `url(${JoinIcon})`,
             backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
+            backgroundPosition: 'right',
             backgroundSize: 'contain',
+            height: '30vh'
           }}
         >
-          <ContactForm></ContactForm>
         </div>
+        <h2 style={{marginLeft:"5vw"}}>{time}</h2>
+        <h2 style={{marginLeft:"5vw"}}>{date}</h2>
+        <h1 className="text-focus-in" style={{textAlign:"center"}}>{dictionary.contact}</h1>
+      <main>
+        <p>{dictionary.cmsg}</p>
+      <ContactForm></ContactForm>
+     </main>
+       
       </div>
     </React.Fragment>
   );

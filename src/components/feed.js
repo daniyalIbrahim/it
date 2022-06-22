@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { css } from '@emotion/react';
 import { useThemeContext } from '../contexts/ThemeContext';
 import cloud from '../assets/cloud.png';
@@ -6,6 +6,8 @@ import web from '../assets/istock.jpeg';
 import netz from '../assets/pexels-2.jpg';
 import app from '../assets/pexels-3.jpg';
 import soft from '../assets/pexels.jpg';
+import { LanguageContext } from '../containers/Language';
+
 
 const FeedCardsStyle = (colors, isLight) => css`
   .scroller {
@@ -14,9 +16,10 @@ const FeedCardsStyle = (colors, isLight) => css`
     grid-auto-flow: column;
     column-gap: 1rem;
     overflow-x: auto;
-    -webkit-box-shadow: 0px 14px 51px -8px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 14px 51px -8px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 14px 51px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 22px 5px -4px rgba(0,0,0,0.43);
+    -webkit-box-shadow: -1px 22px -4px 0px rgba(0,0,0,0.43);
+    -moz-box-shadow: -1px 22px 5px -4px rgba(0,0,0,0.43);
+    margin-bottom: 30px;
   }
 
   .scroller::-webkit-scrollbar {
@@ -94,6 +97,7 @@ const FeedCardsStyle = (colors, isLight) => css`
 `;
 
 export default function FeedCards() {
+  const { dictionary } = useContext(LanguageContext);
   const [modal, setModal] = React.useState(0);
   const { colors, isLight } = useThemeContext();
   const handleClick = (e) => {

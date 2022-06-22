@@ -1,9 +1,9 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { css } from '@emotion/react';
 import { useThemeContext } from '../contexts/ThemeContext';
 import { ReactComponent as GithubIcon } from '../assets/github.svg';
 import { Link, useLocation } from 'react-router-dom';
-
+import { LanguageContext } from '../containers/Language';
 const footerStyle = css`
   margin-top: 50px;
   width: 100vw;
@@ -54,6 +54,7 @@ const iconStyle = (color) => css`
 `;
 
 const Footer = () => {
+  const { dictionary } = useContext(LanguageContext);
   const { isLight } = useThemeContext();
   const { pathname } = useLocation();
 
@@ -64,14 +65,14 @@ const Footer = () => {
       <nav className="nav">
         <div className="nav-item">
           <Link className="menu-item" to="/impressum" replace={pathname === '/impressum'}>
-            Impressum
+            {dictionary.impress}
           </Link>
 
           <Link className="menu-item" to="/privacy-policy" replace={pathname === '/privacy-policy'}>
-            Privacy Policy
+            {dictionary.ppolicy}
           </Link>
           <Link className="menu-item" to="/terms" replace={pathname === '/terms'}>
-            Terms &amp; Conditions
+          {dictionary.terms}
           </Link>
         </div>
         <br />

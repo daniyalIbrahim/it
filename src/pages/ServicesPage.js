@@ -1,12 +1,12 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { css } from '@emotion/react';
-import MetaTags from 'react-meta-tags';
 import { default as WebIcon } from '../assets/online.svg';
 import { default as AppIcon } from '../assets/team_up.svg';
 import { default as DelIcon } from '../assets/delivery.svg';
 import { default as CloudIcon } from '../assets/data.svg';
 import { default as ErpIcon } from '../assets/real.svg';
 import BlobDeco from '../assets/blob.svg';
+import {LanguageContext } from '../containers/Language';
 
 const ServicesPageStyle = css`
   p {
@@ -16,26 +16,28 @@ const ServicesPageStyle = css`
 `;
 
 const ServicesPage = () => {
+  const { dictionary } = useContext(LanguageContext);
+
   return (
     <React.Fragment>
-      <MetaTags>
-        <title>Our Services | IT-BAHN &copy;</title>
-      </MetaTags>
       <main>
         <div css={[ServicesPageStyle]}>
-          <h1 className="title text-focus-in">Our Services</h1>
+          <h1 className="title text-focus-in">{dictionary.services}</h1>
 
-          <p>We provide the following services: </p>
+          <p>{dictionary.cmsg} </p>
 
           <br />
           <div className="row ">
             <div className="col">
               <h2>
-                <strong>Web Development</strong>
+                <strong>{dictionary.SO1}</strong>
               </h2>
               <br />
               <p data-aos="fade-right">
-                We can build your website from scratch or we can integrate your existing website with our services.
+                {dictionary.SO1D}
+              </p>
+              <p data-aos="fade-right">
+                {dictionary.SO1DA}
               </p>
             </div>
             <div
@@ -66,31 +68,29 @@ const ServicesPage = () => {
             </div>
             <div className="col">
               <h2>
-                <strong>Mobile Application Development</strong>
+                <strong>{dictionary.SO2}</strong>
               </h2>
               <br />
               <p data-aos="fade-left">
-                We can build your mobile app from scratch or we can integrate your existing mobile app with our
-                services.
+              {dictionary.SO2D}
+              </p>
+              <p data-aos="fade-left">
+              {dictionary.SO2DA}
               </p>
             </div>
           </div>
           <div className="row">
             <div className="col">
               <h2>
-                <strong>Custom Cloud Applications</strong>
+                <strong>{dictionary.SO3}</strong>
               </h2>
               <br />
               <p data-aos="fade-right">
-                We utilize modern state-of-the-art technologies to build your product. Microservices architecture,
-                containerization, and cloud computing are just a few of the technologies we use to build your product.
-                We help you analyse, design, test and deploy your product.
+              {dictionary.SO3D}  
               </p>
               <br />
               <p data-aos="fade-right">
-                We can build your cloud application from scratch or we can integrate your existing cloud application
-                with our services. We can undertake not only development of your product, but also assist your business
-                in scaling up and maintaining your product.
+              {dictionary.SO3DA}  
               </p>
             </div>
             <div
@@ -121,25 +121,19 @@ const ServicesPage = () => {
             </div>
             <div className="col">
               <h2>
-                <strong>E-Commerce Platform Development</strong>
+                <strong>{dictionary.SO4}</strong>
               </h2>
               <br />
               <p data-aos="fade-left">
-                We can build your e-commerce solution from scratch or we can integrate your existing e-commerce solution
-                with our services.
+              {dictionary.SO4D}
               </p>
             </div>
           </div>
           <div className="row">
             <div className="col">
-              <h2>
-                <strong>ERP Development</strong>
-              </h2>
               <br />
               <p data-aos="fade-right">
-                We can analyse, design and automate your business workflows and help you with reports generation and
-                storage. We can build your ERP solution from scratch or we can integrate your existing ERP solution with
-                our services.
+              {dictionary.SO4DA}
               </p>
             </div>
             <div

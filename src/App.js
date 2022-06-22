@@ -5,6 +5,8 @@ import ReactGA from 'react-ga';
 import AppRouter from './routes';
 import AppLayout from './layouts/AppLayout';
 import ThemeProvider from './contexts/ThemeContext';
+import { LanguageProvider } from './containers/Language';
+
 import './styles/App.css';
 
 function App() {
@@ -12,11 +14,13 @@ function App() {
   ReactGA.initialize(TRACKING_ID);
 
   return (
-    <ThemeProvider>
-      <AppLayout>
-        <AppRouter />
-      </AppLayout>
-    </ThemeProvider>
+    <LanguageProvider>
+      <ThemeProvider>
+        <AppLayout>
+          <AppRouter />
+        </AppLayout>
+      </ThemeProvider>
+    </LanguageProvider>
   );
 }
 

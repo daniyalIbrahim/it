@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Text } from '../containers/Language';
 import { css } from '@emotion/react';
-import MetaTags from 'react-meta-tags';
 import { useThemeContext } from '../contexts/ThemeContext';
-import NewsLetter from '../components/news';
 import FeedCards from '../components/feed';
-import Logo from '../components/logo';
 import { useDate } from '../common/date';
+import { LanguageContext } from '../containers/Language';
+import NewsLetter from '../components/news';
+import Logo from '../components/logo';
 
 const HomePageStyle = (colors, isLight) => css`
   margin-top: 30px;
@@ -51,45 +52,29 @@ const HomePageStyle = (colors, isLight) => css`
 const HomePage = () => {
   const { colors, isLight } = useThemeContext();
   const { wish, date, num, time } = useDate('en');
+  const { dictionary } = useContext(LanguageContext);
 
   return (
     <React.Fragment>
-      <MetaTags>
-        <title>Home | IT-BAHN &copy;</title>
-      </MetaTags>
       <div css={[HomePageStyle(colors, isLight)]}>
-        <div className="banner">
-          <div className="banner-text">
-            <h1 className="title text-focus-in ">{wish}</h1>
-          </div>
-          <div className="banner-logo">
-            <Logo time={time} date={date}></Logo>
-          </div>
-        </div>
         <div className='App-header'>
-          
-          <div className='col'>
-
-          </div>
-          <div className='col'>
-
-          </div>
-
+          <Logo time={time} date={date}></Logo>
+          <h1 className="text-focus-in">{wish}</h1>
         </div>
-        <FeedCards className="feed"></FeedCards>
-        <div className='App-header'>
-          <div className='col'>
-
-          </div>
-          <div className='col'>
-
-          </div>
-
-        </div>
-
         <main>
-          <NewsLetter></NewsLetter>
+          <h2><Text tid={"expertise"}></Text></h2>
+          <p>
+            {dictionary.AB04}
+          </p>
+          <h2>{dictionary.AB05}</h2>
         </main>
+        <hr />
+        <FeedCards className="feed"></FeedCards>
+        <main>
+          <NewsLetter ></NewsLetter>
+        </main>
+
+       
         <div
           dangerouslySetInnerHTML={{
             __html:

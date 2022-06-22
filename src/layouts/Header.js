@@ -1,10 +1,12 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { css } from '@emotion/react';
 import { useThemeContext } from '../contexts/ThemeContext';
 import { ReactComponent as LogoIcon } from '../assets/fig.svg';
 import { ReactComponent as SunIcon } from '../assets/sun.svg';
 import { ReactComponent as MoonIcon } from '../assets/moon.svg';
+import LanguageSelector from '../components/LanguageSelector';
+import { LanguageContext } from '../containers/Language';
 
 const headerStyle = (colors, isLight) => css`
   @media (max-width: 768px) {
@@ -120,9 +122,9 @@ const headerStyle = (colors, isLight) => css`
 `;
 
 const Header = () => {
+  const { dictionary } = useContext(LanguageContext);
   const { pathname } = useLocation();
   const { colors, isLight, toggleTheme } = useThemeContext();
-
   const [isOpen, setIsOpen] = React.useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -148,23 +150,27 @@ const Header = () => {
           <div className="top-nav">
             <div className="menu">
               <Link className="menu-item" to="/" replace={pathname === '/'}>
-                Home
+                {dictionary.home}
               </Link>
               <Link className="menu-item" to="/about" replace={pathname === '/about'}>
-                About Us
+                {dictionary.about}
               </Link>
               <Link className="menu-item" to="/services" replace={pathname === '/services'}>
-                Our Services
+                {dictionary.services}
               </Link>
               <Link className="menu-item" to="/contact-us" replace={pathname === '/contact-us'}>
-                Contact Us
+                {dictionary.contact}
               </Link>
             </div>
+         
+            <LanguageSelector></LanguageSelector>
             {isLight ? (
               <SunIcon className="theme" onClick={toggleTheme} />
             ) : (
               <MoonIcon className="theme" onClick={toggleTheme} />
-            )}
+            )
+            }
+            
             <button type="button" className="hamburger" onClick={toggleMenu}>
               <span className="line"></span>
               <span className="line"></span>
@@ -178,16 +184,16 @@ const Header = () => {
             <br />
             <br />
             <Link className="menu-item" to="/" replace={pathname === '/'} onClick={toggleMenu}>
-              Home
+              {dictionary.home}
             </Link>
             <Link className="menu-item" to="/about" replace={pathname === '/about'} onClick={toggleMenu}>
-              About Us
+              {dictionary.about}
             </Link>
             <Link className="menu-item" to="/services" replace={pathname === '/services'} onClick={toggleMenu}>
-              Our Services
+              {dictionary.services}
             </Link>
             <Link className="menu-item" to="/contact-us" replace={pathname === '/contact-us'} onClick={toggleMenu}>
-              Contact Us
+              {dictionary.contact}
             </Link>
           </div>
         ) : null}

@@ -10,6 +10,7 @@ const LogoStyle = (colors, isLight) => css`
   .heavy {
     font: bold 20px sans-serif;
   }
+
 `;
 
 const Logo = ({ time, date }) => {
@@ -27,12 +28,6 @@ const Logo = ({ time, date }) => {
       css={[LogoStyle(colors, isLight)]}
       className="App-logo"
     >
-      <text x="190" y="200" className="small">
-        {date}
-      </text>
-      <text x="210" y="230" className="heavy">
-        {time}
-      </text>
       <g transform="translate(0.000000,428.000000) scale(0.100000,-0.100000)" fill={color} stroke="none">
         <path
           data-aos="fade-right"
