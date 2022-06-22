@@ -66,7 +66,26 @@ const HomePage = () => {
             <Logo time={time} date={date}></Logo>
           </div>
         </div>
+        <div className='App-header'>
+          
+          <div className='col'>
+
+          </div>
+          <div className='col'>
+
+          </div>
+
+        </div>
         <FeedCards className="feed"></FeedCards>
+        <div className='App-header'>
+          <div className='col'>
+
+          </div>
+          <div className='col'>
+
+          </div>
+
+        </div>
 
         <main>
           <NewsLetter></NewsLetter>
