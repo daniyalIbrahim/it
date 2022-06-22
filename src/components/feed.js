@@ -54,6 +54,7 @@ const FeedCardsStyle = (colors, isLight) => css`
     background: linear-gradient(147deg, #fb5ac0 0%, #3619ab 100%);
     border-radius: inherit;
     z-index: -1;
+    
   }
 
   .modal {
@@ -61,7 +62,8 @@ const FeedCardsStyle = (colors, isLight) => css`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    scroll-behavior: smooth;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 1);
     z-index: 9999;
   }
@@ -83,7 +85,7 @@ const FeedCardsStyle = (colors, isLight) => css`
   }
   .modal-img {
     width: 100%;
-    height: 50%;
+    height: 30%;
     margin-top: 10vh;
   }
   p {
@@ -122,6 +124,7 @@ export default function FeedCards() {
   return (
     <React.Fragment>
       <div css={[FeedCardsStyle(colors, isLight)]}>
+            
         <div className="scroller">
           <div className="scroller-item">
             <img onClick={(e) => handleClick(e)} name="cloud" src={cloud} alt="" />
@@ -134,16 +137,14 @@ export default function FeedCards() {
                 </span>
               </button>
               <img className="modal-img" src={cloud} alt="" />
-              <h1>title</h1>
+              <h1>{dictionary.SO1}</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quidem. Lorem ipsum dolor sit amet consectetur
+              {dictionary.SO1D}
               </p>
             </div>
           ) : null}
           <div className="scroller-item">
-            <img onClick={(e) => handleClick(e)} src={web} name="web" alt="" />
+            <img onClick={(e) => handleClick(e)} src={netz} name="web" alt="" />
           </div>
           {modal === 2 ? (
             <div className="modal" data-aos="fade-right">
@@ -152,17 +153,15 @@ export default function FeedCards() {
                   &times;
                 </span>
               </button>
-              <img className="modal-img" src={web} alt="" />
-              <h1>title</h1>
+              <img className="modal-img" src={netz} alt="" />
+              <h1>{dictionary.SO2}</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quidem. Lorem ipsum dolor sit amet consectetur
+              {dictionary.SO2D}
               </p>
             </div>
           ) : null}
           <div className="scroller-item">
-            <img onClick={(e) => handleClick(e)} src={netz} name="netz" alt="" />
+            <img onClick={(e) => handleClick(e)} src={web} name="netz" alt="" />
           </div>
           {modal === 3 ? (
             <div className="modal" data-aos="fade-right">
@@ -171,12 +170,10 @@ export default function FeedCards() {
                   &times;
                 </span>
               </button>
-              <img className="modal-img" src={netz} alt="" />
-              <h1>title</h1>
+              <img className="modal-img" src={web} alt="" />
+              <h1>{dictionary.SO3}</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quidem. Lorem ipsum dolor sit amet consectetur
+              {dictionary.SO3D}
               </p>
             </div>
           ) : null}
@@ -191,33 +188,16 @@ export default function FeedCards() {
                 </span>
               </button>
               <img className="modal-img" src={app} alt="" />
-              <h1>title</h1>
+              <h1>{dictionary.SO4}</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quidem. Lorem ipsum dolor sit amet consectetur
+              {dictionary.SO4D}
+              </p>
+              <p>
+              {dictionary.SO4DA}
               </p>
             </div>
           ) : null}
-          <div className="scroller-item">
-            <img onClick={(e) => handleClick(e)} src={soft} alt="" name="soft" />
-          </div>
-          {modal === 5 ? (
-            <div className="modal" data-aos="fade-right">
-              <button className="close" onClick={() => setModal(0)}>
-                <span aria-hidden="true" className="cross">
-                  &times;
-                </span>
-              </button>
-              <img className="modal-img" src={soft} alt="" />
-              <h1>title</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Quisquam, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quidem. Lorem ipsum dolor sit amet consectetur
-              </p>
-            </div>
-          ) : null}
+         
         </div>
       </div>
     </React.Fragment>
