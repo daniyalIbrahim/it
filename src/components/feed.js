@@ -98,7 +98,6 @@ export default function FeedCards() {
   const { colors, isLight } = useThemeContext();
   const handleClick = (e) => {
     e.preventDefault();
-    console.log('clicked', e.target.name);
     if (e.target.name === 'cloud') {
       setModal(1);
     }

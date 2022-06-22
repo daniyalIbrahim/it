@@ -17,8 +17,8 @@
     "react-router-dom": "^6.3.0"
   },
   "scripts": {
-    "start": "SET NODE_ENV=development | webpack serve --progress",
-    "build": "SET NODE_ENV=production | webpack",
+    "start": "NODE_ENV=development | webpack serve --progress",
+    "build": "NODE_ENV=production | webpack",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --fix ."

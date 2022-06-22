@@ -10,10 +10,9 @@ const LogoStyle = (colors, isLight) => css`
   .heavy {
     font: bold 20px sans-serif;
   }
-  
 `;
 
-const Logo = ({ time,date }) => {
+const Logo = ({ time, date }) => {
   const { colors, isLight } = useThemeContext();
   const color = !isLight ? '#ffffff' : '#000000';
 
@@ -34,9 +33,8 @@ const Logo = ({ time,date }) => {
       <text x="210" y="230" className="heavy">
         {time}
       </text>
-      <g  transform="translate(0.000000,428.000000) scale(0.100000,-0.100000)" fill={color} stroke="none">
+      <g transform="translate(0.000000,428.000000) scale(0.100000,-0.100000)" fill={color} stroke="none">
         <path
-        
           data-aos="fade-right"
           d="M2236 4174 c-349 -47 -663 -176 -955 -391 -94 -70 -283 -253 -364
 -353 -201 -249 -342 -551 -413 -885 -21 -98 -26 -159 -31 -331 -8 -288 17

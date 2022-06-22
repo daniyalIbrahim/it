@@ -7,7 +7,6 @@ import FeedCards from '../components/feed';
 import Logo from '../components/logo';
 import { useDate } from '../common/date';
 
-
 const HomePageStyle = (colors, isLight) => css`
   margin-top: 30px;
   .logo {
@@ -44,7 +43,7 @@ const HomePageStyle = (colors, isLight) => css`
   .banner-logo {
     display: flex;
   }
-  .title{
+  .title {
     padding: 10px;
   }
 `;
@@ -53,20 +52,18 @@ const HomePage = () => {
   const { colors, isLight } = useThemeContext();
   const { wish, date, num, time } = useDate('en');
 
-
   return (
     <React.Fragment>
       <MetaTags>
         <title>Home | IT-BAHN &copy;</title>
       </MetaTags>
       <div css={[HomePageStyle(colors, isLight)]}>
-
         <div className="banner">
           <div className="banner-text">
             <h1 className="title text-focus-in ">{wish}</h1>
           </div>
           <div className="banner-logo">
-            <Logo  time={time} date={date}></Logo>
+            <Logo time={time} date={date}></Logo>
           </div>
         </div>
         <FeedCards className="feed"></FeedCards>
