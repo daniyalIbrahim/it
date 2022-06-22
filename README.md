@@ -20,7 +20,7 @@
 
 ## Live demo
 
-[https://daniyalibrahim.github.io/it-bahn](https://daniyalibrahim.github.io/it-bahn)
+[it-bahn](https://daniyalibrahim.github.io/it-bahn)
 
 
 ## Develop
