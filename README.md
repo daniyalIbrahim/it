@@ -22,34 +22,3 @@
 
 [it-bahn](https://it-bahn.com)
 
-
-## Develop
-
-```shell
-# clone this repository
-$ git clone https://github.com/daniyalibrahim/it-bahn
-
-# go into template directory
-$ cd it-bahn
-
-# install dependencies
-$ npm install
-```
-
-## Commands
-
-### Run dev server
-
-```shell
-$ npm start
-```
-
-Run dev server on [http://localhost:8080](http://localhost:8080)
-
-### Build
-
-```shell
-$ npm run build
-```
-
-Creating a Production Build. The build artifacts will be stored in the `dist/` directory.
