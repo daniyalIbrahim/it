@@ -9,20 +9,17 @@ import NewsLetter from '../components/news';
 import Logo from '../components/logo';
 import Motive from "../components/motive"
 
-
 const HomePageStyle = (colors, isLight) => css`
   margin-top: 30px;
-  .logo {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-  }
   svg {
     cursor: pointer;
     color: ${isLight ? 'inherit' : colors.gray[8]};
     fill: ${colors.gray[8]};
   }
   .logo {
+    display: grid;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     color: ${isLight ? 'inherit' : colors.gray[8]};
     fill: ${colors.gray[8]};
@@ -31,29 +28,16 @@ const HomePageStyle = (colors, isLight) => css`
     position: relative;
     z-index: 999;
   }
-  .banner {
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    width: 100vw;
-  }
-  .banner-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .banner-logo {
-    display: flex;
-  }
-  .title {
-    padding: 10px;
+  @media (min-width: 768px) {
+    .col{
+      max-width:50%;
+    }
   }
 `;
 
 const HomePage = () => {
   const { colors, isLight } = useThemeContext();
-  const { wish, date, num, time } = useDate('en');
+  const { wish } = useDate('en');
   const { dictionary } = useContext(LanguageContext);
 
   return (
@@ -61,24 +45,25 @@ const HomePage = () => {
       <div css={[HomePageStyle(colors, isLight)]}>
         <div className='App-header'>
           <Logo ></Logo>
-          <h1 className="text-focus-in">{wish}</h1>
+
         </div>
         <main>
+          <h1 className="text-focus-in">{wish}</h1>
           <h2><Text tid={"expertise"}></Text></h2>
-          <br/>
+          <br />
           <p>
             {dictionary.AB04}
           </p>
           <h2>{dictionary.AB05}</h2>
-          <br/>
-          <br/>
-          <Motive/>
-          <br/>
+          <br />
+          <br />
+          <Motive />
+          <br />
           <FeedCards className="feed"></FeedCards>
-          <hr/>
+          <hr />
           <NewsLetter ></NewsLetter>
-          <br/>
-          <hr/>
+          <br />
+          <hr />
         </main>
         <div
           dangerouslySetInnerHTML={{

@@ -16,14 +16,15 @@ html {
 html,body{
   margin:0;
   padding:0;
+  overflow-x: hidden; 
 }
 h1 {
   font-size: 5rem;
   font-weight: 600;
   padding: 10px;
-  background: #fb5ac0;
-  background: -webkit-linear-gradient(147deg, #fb5ac0 0%, #3619ab 100%);
-  background: linear-gradient(147deg, #fb5ac0 0%, #3619ab 100%);
+  background: #c2e59c;
+  background: -webkit-linear-gradient(147deg, #c2e59c 0%, #64b3f4 100%);
+  background: linear-gradient(147deg, #c2e59c 0%, #64b3f4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -31,32 +32,30 @@ h2 {
   font-size: 2rem;
   font-weight: 300;
   padding: 10px;
-  background: #fb5ac0;
-  background: -webkit-linear-gradient(147deg, #fb5ac0 0%, #3619ab 100%);
-  background: linear-gradient(147deg, #fb5ac0 0%, #3619ab 100%);
+  background: #c2e59c;
+  background: -webkit-linear-gradient(147deg, #c2e59c 0%, #64b3f4 100%);
+  background: linear-gradient(147deg, #c2e59c 0%, #64b3f4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 p{
   font-size: 1.7rem;
-  padding: auto;
-  margin-bottom: 40px;
   text-align: justify;
 }
 .row{
   display:flex;
   flex-direction:row;
   align-items:top;
-  justify-content:center;
   gap: 30px;
   margin-top: 30px;
 }
 .col{
   display:flex;
   flex-direction:column;
-  
+ 
 }
+
 
 @media (max-width: 768px) {
   h1{

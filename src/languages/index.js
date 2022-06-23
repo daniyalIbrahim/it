@@ -12,9 +12,9 @@ export const dictionaryList = { en, fr, de ,pl};
 
 export const languageOptions = {
   en: 'EN',
-  fr: 'FR',
-  de: `DE`,
-  pl: 'PL'
+  fr: ' FR',
+  de: ' DE',
+  pl: ' PL'
 };
 
 export const languageFlags = {

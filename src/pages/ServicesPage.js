@@ -140,18 +140,7 @@ const ServicesPage = () => {
               {dictionary.SO4DA}
               </p>
             </div>
-            <div
-              className="col icon"
-              data-aos="fade-left"
-              style={{
-                backgroundImage: `url(${BlobDeco})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'left',
-                backgroundSize: 'contain',
-              }}
-            >
-              <img src={ErpIcon} alt="erp development" />
-            </div>
+           
           </div>
         </div>
       </main>

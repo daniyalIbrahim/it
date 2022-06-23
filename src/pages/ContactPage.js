@@ -28,8 +28,8 @@ const ContactPage = () => {
       <div className='App-header'>
       <Logo time={time} date={date}></Logo>
       <h1 className="text-focus-in">{wish}</h1>
+
       </div>
-     
         <div
           style={{
             backgroundImage: `url(${JoinIcon})`,
@@ -45,8 +45,8 @@ const ContactPage = () => {
         <h1 className="text-focus-in" style={{textAlign:"center"}}>{dictionary.contact}</h1>
         
       <main>
-      <p>{dictionary.cmsg}</p>
-      <ContactForm></ContactForm>
+      <p style={{marginBottom:"5vh"}}>{dictionary.cmsg}</p>
+      <ContactForm ></ContactForm>
      </main>
        
       </div>

@@ -48,9 +48,9 @@ const FeedCardsStyle = (colors, isLight) => css`
     transform: translate(-50%, -50%);
     width: calc(100% + 15px);
     height: calc(100% + 15px);
-    background: #fb5ac0;
-    background: -webkit-linear-gradient(147deg, #fb5ac0 0%, #3619ab 100%);
-    background: linear-gradient(147deg, #fb5ac0 0%, #3619ab 100%);
+    background: #c2e59c;
+    background: -webkit-linear-gradient(147deg, #c2e59c 0%, #64b3f4 100%);
+    background: linear-gradient(147deg, #c2e59c 0%, #64b3f4 100%);
     border-radius: inherit;
     z-index: -1;
     
@@ -141,14 +141,14 @@ export default function FeedCards() {
           <div className="scroller-item">
             <img onClick={(e) => handleClick(e)} src={app} name="app" alt="" />
           </div>
-          {modal === 4 ? <ModalWindow setModal={setModal} imgPath={app} title={dictionary.SO4} desc={dictionary.SO4D+"\n"+dictionary.SO4DA} /> : null}
+          {modal === 4 ? <ModalWindow setModal={setModal} imgPath={app} title={dictionary.SO4} desc={dictionary.SO4D + "\n" + dictionary.SO4DA} /> : null}
         </div>
       </div>
     </React.Fragment>
   );
 }
 
-const ModalWindow = ({setModal,imgPath,title,desc}) => {
+const ModalWindow = ({ setModal, imgPath, title, desc }) => {
 
   return (
     <div className="modal" data-aos="fade-right">
