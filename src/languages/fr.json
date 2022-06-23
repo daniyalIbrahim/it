@@ -39,5 +39,18 @@
   "SO3DA":"IT-Bahn peut vous aider dans ces cas. Aussi bien dans la conception d'une intégration informatique efficace pour le meilleur soutien possible de vos processus d'affaires, que dans le thème de la sécurité de l'information, nous sommes à votre disposition comme interlocuteur. Notre méthode, nos outils et nos modèles sont les mieux adaptés à vos besoins. En outre, nous coopérons avec des partenaires commerciaux sur des sujets particuliers afin de développer une solution optimale pour vous.",
   "SO4":"Développement de logiciels",
   "SO4D":"Nous créons des logiciels personnalisés pour résoudre les défis auxquels les entreprises sont confrontées sur la voie du succès.",
-  "SO4DA":"Nous fournissons nos services de qualité supérieure en associant un travail d'équipe professionnel à des technologies modernes de développement de logiciels. Notre pile technologique répond aux exigences des projets les plus difficiles."
+  "SO4DA":"Nous fournissons nos services de qualité supérieure en associant un travail d'équipe professionnel à des technologies modernes de développement de logiciels. Notre pile technologique répond aux exigences des projets les plus difficiles.",
+  "MO1":"Nous fournissons des services de qualité supérieure en associant un travail d'équipe professionnel à des technologies modernes de développement de logiciels. Notre pile technologique répond aux exigences des projets les plus ambitieux.",
+  "MO2":"Approche de la livraison",
+  "MO2D":"Pendant le développement de votre logiciel personnalisé, nous passerons par plusieurs itérations conceptuelles.",
+  "MO3":"Cartographie des besoins de l'entreprise",
+  "MO3D":"Pour élaborer une conception de solution appropriée et la vision du produit, nos experts déterminent le défi ou l'opportunité commerciale, les besoins, les objectifs, les attentes du client, le modèle de distribution, les publics cibles et les réglementations à respecter.",
+  "MO4":"Conception UI et UX",
+  "MO4D":"En tenant compte des normes de l'industrie et des modèles comportementaux, Kapsys crée des systèmes de conception avec des composants réutilisables. Ceux-ci peuvent être assemblés pour construire un nombre illimité d'applications et introduire des changements à tous les niveaux du système, rapidement et avec un minimum d'efforts.",
+  "MO5":"Architecture de la solution",
+  "MO5D":"Ensuite, nous fournissons la vision globale de l'architecture. Le prototype détaillé cliquable consiste en un schéma complet de la solution avec la liste de tous les composants, l'infrastructure et les intégrations.",
+  "MO6":"Processus de développement",
+  "MO6D":"À ce stade, nous modélisons un cycle de vie de développement de logiciels personnalisés et une approche de livraison. Sur la base des systèmes de conception créés, nous élaborons la carte technique qui démontre les rôles, les responsabilités, les artefacts et les processus nécessaires à la mise en œuvre de la solution.",
+  "MO7":"Embarquement",
+  "MO7D":"En plus de fournir une conception de solution, nos experts donnent le coup d'envoi du processus de développement, rédigent des manuels et mènent des activités de formation et d'accompagnement."
 }  

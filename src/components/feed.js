@@ -1,4 +1,4 @@
-import React,{useContext} from 'react';
+import React, { useContext } from 'react';
 import { css } from '@emotion/react';
 import { useThemeContext } from '../contexts/ThemeContext';
 import cloud from '../assets/cloud.png';
@@ -16,10 +16,9 @@ const FeedCardsStyle = (colors, isLight) => css`
     grid-auto-flow: column;
     column-gap: 1rem;
     overflow-x: auto;
-    box-shadow: -1px 22px 5px -4px rgba(0,0,0,0.43);
-    -webkit-box-shadow: -1px 22px -4px 0px rgba(0,0,0,0.43);
-    -moz-box-shadow: -1px 22px 5px -4px rgba(0,0,0,0.43);
+    box-shadow: 0px 35px 17px 5px rgba(0,0,0,0.1),0px -28px 37px -3px rgba(0,0,0,0.1);
     margin-bottom: 30px;
+    gap:5vw;
   }
 
   .scroller::-webkit-scrollbar {
@@ -30,7 +29,7 @@ const FeedCardsStyle = (colors, isLight) => css`
     position: relative;
     width: 100px;
     height: 100px;
-    border: 4px solid #151515;
+
     border-radius: 50%;
   }
 
@@ -56,7 +55,9 @@ const FeedCardsStyle = (colors, isLight) => css`
     z-index: -1;
     
   }
-
+  .scroller-item::before , .scroller-item img{
+    margin-left:5vw;
+  }
   .modal {
     position: fixed;
     top: 0;
@@ -124,82 +125,44 @@ export default function FeedCards() {
   return (
     <React.Fragment>
       <div css={[FeedCardsStyle(colors, isLight)]}>
-            
         <div className="scroller">
           <div className="scroller-item">
             <img onClick={(e) => handleClick(e)} name="cloud" src={cloud} alt="" />
           </div>
-          {modal === 1 ? (
-            <div className="modal" data-aos="fade-right">
-              <button className="close" onClick={() => setModal(0)}>
-                <span aria-hidden="true" className="cross">
-                  &times;
-                </span>
-              </button>
-              <img className="modal-img" src={cloud} alt="" />
-              <h1>{dictionary.SO1}</h1>
-              <p>
-              {dictionary.SO1D}
-              </p>
-            </div>
-          ) : null}
-          <div className="scroller-item">
-            <img onClick={(e) => handleClick(e)} src={netz} name="web" alt="" />
-          </div>
-          {modal === 2 ? (
-            <div className="modal" data-aos="fade-right">
-              <button className="close" onClick={() => setModal(0)}>
-                <span aria-hidden="true" className="cross">
-                  &times;
-                </span>
-              </button>
-              <img className="modal-img" src={netz} alt="" />
-              <h1>{dictionary.SO2}</h1>
-              <p>
-              {dictionary.SO2D}
-              </p>
-            </div>
-          ) : null}
+          {modal === 1 ? <ModalWindow setModal={setModal} imgPath={cloud} title={dictionary.SO1} desc={dictionary.SO1D} /> : null}
           <div className="scroller-item">
             <img onClick={(e) => handleClick(e)} src={web} name="netz" alt="" />
           </div>
-          {modal === 3 ? (
-            <div className="modal" data-aos="fade-right">
-              <button className="close" onClick={() => setModal(0)}>
-                <span aria-hidden="true" className="cross">
-                  &times;
-                </span>
-              </button>
-              <img className="modal-img" src={web} alt="" />
-              <h1>{dictionary.SO3}</h1>
-              <p>
-              {dictionary.SO3D}
-              </p>
-            </div>
-          ) : null}
+          {modal === 2 ? <ModalWindow setModal={setModal} imgPath={netz} title={dictionary.SO2} desc={dictionary.SO2D} /> : null}
+          <div className="scroller-item">
+            <img onClick={(e) => handleClick(e)} src={netz} name="web" alt="" />
+          </div>
+          {modal === 3 ? <ModalWindow setModal={setModal} imgPath={web} title={dictionary.SO3} desc={dictionary.SO3D} /> : null}
           <div className="scroller-item">
             <img onClick={(e) => handleClick(e)} src={app} name="app" alt="" />
           </div>
-          {modal === 4 ? (
-            <div className="modal" data-aos="fade-right">
-              <button className="close" onClick={() => setModal(0)}>
-                <span aria-hidden="true" className="cross">
-                  &times;
-                </span>
-              </button>
-              <img className="modal-img" src={app} alt="" />
-              <h1>{dictionary.SO4}</h1>
-              <p>
-              {dictionary.SO4D}
-              </p>
-              <p>
-              {dictionary.SO4DA}
-              </p>
-            </div>
-          ) : null}
-         
+          {modal === 4 ? <ModalWindow setModal={setModal} imgPath={app} title={dictionary.SO4} desc={dictionary.SO4D+"\n"+dictionary.SO4DA} /> : null}
         </div>
       </div>
     </React.Fragment>
   );
+}
+
+const ModalWindow = ({setModal,imgPath,title,desc}) => {
+
+  return (
+    <div className="modal" data-aos="fade-right">
+      <button className="close" onClick={() => setModal(0)}>
+        <span aria-hidden="true" className="cross">
+          &times;
+        </span>
+      </button>
+      <img className="modal-img" src={imgPath} alt="" />
+      <h1>{title}</h1>
+      <p>
+        {desc}
+      </p>
+    </div>
+  )
+
 }

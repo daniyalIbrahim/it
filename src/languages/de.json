@@ -39,5 +39,18 @@
   "SO3DA":"IT-Bahn kann Ihnen in diesen Fällen helfen. Sowohl bei der Gestaltung einer effizienten IT-Integration zur bestmöglichen Unterstützung Ihrer Geschäftsprozesse, als auch beim Thema Informationssicherheit, stehen wir Ihnen als Ansprechpartner zur Verfügung. Unsere Methode, unsere Tools und Templates sind optimal auf Ihre Bedürfnisse abgestimmt. Darüber hinaus arbeiten wir bei speziellen Themen mit Geschäftspartnern zusammen, um eine optimale Lösung für Sie zu entwickeln.",
   "SO4":"Software-Entwicklung",
   "SO4D":"Wir entwickeln maßgeschneiderte Software, um die Herausforderungen zu lösen, denen Unternehmen auf ihrem Weg zum Erfolg begegnen.",
-  "SO4DA":"Unsere qualitativ hochwertigen Dienstleistungen erbringen wir durch die Kombination von professioneller Teamarbeit mit modernen Softwareentwicklungstechnologien. Unser Technologiepaket erfüllt die Anforderungen der anspruchsvollsten Projekte."
+  "SO4DA":"Unsere qualitativ hochwertigen Dienstleistungen erbringen wir durch die Kombination von professioneller Teamarbeit mit modernen Softwareentwicklungstechnologien. Unser Technologiepaket erfüllt die Anforderungen der anspruchsvollsten Projekte.",
+  "MO1":"Wir erbringen unsere qualitativ hochwertigen Dienstleistungen durch die Kombination von professioneller Teamarbeit mit modernen Softwareentwicklungstechnologien. Unser Technologiepaket erfüllt die Anforderungen der anspruchsvollsten Projekte.",
+  "MO2":"Ansatz für die Lieferung",
+  "MO2D":"Während der Entwicklung Ihrer individuellen Software durchlaufen wir mehrere konzeptionelle Iterationen",
+  "MO3":"Mapping der Geschäftsanforderungen",
+  "MO3D":"Um ein geeignetes Lösungsdesign und eine Produktvision zu entwickeln, ermitteln unsere Experten die geschäftliche Herausforderung oder Gelegenheit, die Bedürfnisse, Ziele, Erwartungen des Kunden, das Vertriebsmodell, die Zielgruppen und die einzuhaltenden Vorschriften.",
+  "MO4":"UI- und UX-Entwurf",
+  "MO4D":"Unter Berücksichtigung der Industriestandards und Verhaltensmuster, erstellt Kapsys Design-Systeme mit wiederverwendbaren Komponenten. Diese können zusammengesetzt werden, um eine beliebige Anzahl von Anwendungen zu erstellen und Änderungen auf allen Systemebenen schnell und mit minimalem Aufwand einzuführen.",
+  "MO5":"Architektur der Lösung",
+  "MO5D":"Als nächstes stellen wir die Gesamtarchitektur vor. Der detaillierte klickbare Prototyp besteht aus dem vollständigen Lösungsschema mit der Liste aller Komponenten, Infrastruktur und Integrationen.",
+  "MO6":"Entwicklungsprozess",
+  "MO6D":"In dieser Phase modellieren wir einen kundenspezifischen Softwareentwicklungszyklus und einen Lieferansatz. Auf der Grundlage der erstellten Designsysteme erarbeiten wir die technische Karte, die die Rollen, Verantwortlichkeiten, Artefakte und Prozesse aufzeigt, die zur Implementierung der Lösung erforderlich sind.",
+  "MO7":"Einarbeitung",
+  "MO7D":"Neben der Erstellung eines Lösungsdesigns geben unsere Experten den Startschuss für den Entwicklungsprozess, erstellen Handbücher und führen Schulungs- und Coachingmaßnahmen durch."
 }

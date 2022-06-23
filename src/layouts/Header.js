@@ -7,12 +7,13 @@ import { ReactComponent as SunIcon } from '../assets/sun.svg';
 import { ReactComponent as MoonIcon } from '../assets/moon.svg';
 import LanguageSelector from '../components/LanguageSelector';
 import { LanguageContext } from '../containers/Language';
+import {languageFlags } from '../languages';
+
 
 const headerStyle = (colors, isLight) => css`
   @media (max-width: 768px) {
     .overlay {
       display: flex;
-
       align-items: center;
       justify-content: start;
       flex-direction: column;
@@ -105,6 +106,7 @@ const headerStyle = (colors, isLight) => css`
     display: flex;
     align-items: center;
     justify-content: center;
+
   }
   .menu {
     display: flex;
@@ -119,10 +121,13 @@ const headerStyle = (colors, isLight) => css`
     font-size: 1.5rem;
     font-weight: 300;
   }
+ .theme{
+  margin-right:10px;
+ }
 `;
 
 const Header = () => {
-  const { dictionary } = useContext(LanguageContext);
+  const { userLanguage, dictionary } = useContext(LanguageContext);
   const { pathname } = useLocation();
   const { colors, isLight, toggleTheme } = useThemeContext();
   const [isOpen, setIsOpen] = React.useState(false);
@@ -162,7 +167,7 @@ const Header = () => {
                 {dictionary.contact}
               </Link>
             </div>
-         
+            <img style={{width:"30px",height:"30px"}} src={languageFlags[userLanguage]} alt="lang flag"/>
             <LanguageSelector></LanguageSelector>
             {isLight ? (
               <SunIcon className="theme" onClick={toggleTheme} />
@@ -170,7 +175,7 @@ const Header = () => {
               <MoonIcon className="theme" onClick={toggleTheme} />
             )
             }
-            
+    
             <button type="button" className="hamburger" onClick={toggleMenu}>
               <span className="line"></span>
               <span className="line"></span>

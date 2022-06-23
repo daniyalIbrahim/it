@@ -1,6 +1,6 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { css } from '@emotion/react';
-
+import {LanguageContext } from '../containers/Language';
 const ImpressumPageStyle = css`
   h1 {
     font-size: 5rem;
@@ -38,10 +38,11 @@ const ImpressumPageStyle = css`
 `;
 
 const ImpressumPage = () => {
+  const { dictionary } = useContext(LanguageContext);
   return (
     <main>
       <div css={[ImpressumPageStyle]}>
-        <h1 className="title">Impressum</h1>
+        <h1 className="title">{dictionary.impress}</h1>
         <h2>Information regarding the company</h2>
         <br />
         <p>SMR GROUP Spółka z ograniczoną odpowiedzialnością</p>

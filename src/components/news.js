@@ -10,7 +10,7 @@ const NewsLetterStyle = (colors, isLight) => css`
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  border-color: ${isLight ? 'inherit' : colors.gray[8]};
+  
 
   .input-group {
     margin-top: 50px;

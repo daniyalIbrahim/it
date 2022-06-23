@@ -2,6 +2,8 @@
 
 * {
   box-sizing: border-box;
+  margin:0;
+  padding:0;
 }
 
 html {
@@ -28,7 +30,7 @@ h1 {
 h2 {
   font-size: 2rem;
   font-weight: 300;
-
+  padding: 10px;
   background: #fb5ac0;
   background: -webkit-linear-gradient(147deg, #fb5ac0 0%, #3619ab 100%);
   background: linear-gradient(147deg, #fb5ac0 0%, #3619ab 100%);
@@ -37,9 +39,9 @@ h2 {
 }
 
 p{
-  font-size: 15px;
+  font-size: 1.7rem;
   padding: auto;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-align: justify;
 }
 .row{
@@ -61,7 +63,10 @@ p{
     font-size: 3rem;
   }
   h2{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+  }
+  p{
+    font-size: 1.3rem;
   }
   .row{
     flex-direction:column;

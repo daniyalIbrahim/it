@@ -7,6 +7,7 @@ import { default as CloudIcon } from '../assets/data.svg';
 import { default as ErpIcon } from '../assets/real.svg';
 import BlobDeco from '../assets/blob.svg';
 import {LanguageContext } from '../containers/Language';
+import Logo from '../components/logo';
 
 const ServicesPageStyle = css`
   p {
@@ -20,6 +21,9 @@ const ServicesPage = () => {
 
   return (
     <React.Fragment>
+        <div className='App-header'>
+          <Logo></Logo>
+        </div>
       <main>
         <div css={[ServicesPageStyle]}>
           <h1 className="title text-focus-in">{dictionary.services}</h1>

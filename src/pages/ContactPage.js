@@ -43,8 +43,9 @@ const ContactPage = () => {
         <h2 style={{marginLeft:"5vw"}}>{time}</h2>
         <h2 style={{marginLeft:"5vw"}}>{date}</h2>
         <h1 className="text-focus-in" style={{textAlign:"center"}}>{dictionary.contact}</h1>
+        
       <main>
-        <p>{dictionary.cmsg}</p>
+      <p>{dictionary.cmsg}</p>
       <ContactForm></ContactForm>
      </main>
        

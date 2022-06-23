@@ -7,6 +7,8 @@ import { useDate } from '../common/date';
 import { LanguageContext } from '../containers/Language';
 import NewsLetter from '../components/news';
 import Logo from '../components/logo';
+import Motive from "../components/motive"
+
 
 const HomePageStyle = (colors, isLight) => css`
   margin-top: 30px;
@@ -58,23 +60,26 @@ const HomePage = () => {
     <React.Fragment>
       <div css={[HomePageStyle(colors, isLight)]}>
         <div className='App-header'>
-          <Logo time={time} date={date}></Logo>
+          <Logo ></Logo>
           <h1 className="text-focus-in">{wish}</h1>
         </div>
         <main>
           <h2><Text tid={"expertise"}></Text></h2>
+          <br/>
           <p>
             {dictionary.AB04}
           </p>
           <h2>{dictionary.AB05}</h2>
-        </main>
-        <hr />
-        <FeedCards className="feed"></FeedCards>
-        <main>
+          <br/>
+          <br/>
+          <Motive/>
+          <br/>
+          <FeedCards className="feed"></FeedCards>
+          <hr/>
           <NewsLetter ></NewsLetter>
+          <br/>
+          <hr/>
         </main>
-
-       
         <div
           dangerouslySetInnerHTML={{
             __html:

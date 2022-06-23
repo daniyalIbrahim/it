@@ -35,9 +35,13 @@ const ContactStyle = (colors, isLight) => css`
     transform: translate(10px, 10px);
     transform-origin: left;
     transition: transform 0.25s;
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
-
+  @media (max-width: 768px){
+    .input-label {
+      font-size: 1.5rem;
+    }
+  }
   .input:focus ~ .input-label,
   .input:valid ~ .input-label {
     transform: translate(0, -30px) scale(0.8);

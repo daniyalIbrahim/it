@@ -6,6 +6,8 @@ import { default as DecoIcon2 } from '../assets/instant_analysis.svg';
 import { default as DecoIcon3 } from '../assets/social_thinking.svg';
 import BlobDeco from '../assets/blob.svg';
 import {LanguageContext } from '../containers/Language';
+import Logo from '../components/logo';
+
 
 const AboutPageStyle = css``;
 
@@ -15,8 +17,11 @@ const AboutPage = () => {
   return (
     <React.Fragment>
       <div>
+      <div className='App-header'>
+          <Logo ></Logo>
+        </div>
         <main css={[AboutPageStyle]}>
-          <h1 className="title text-focus-in">{dictionary.about}</h1>
+          <h1 className="text-focus-in">{dictionary.about}</h1>
           <div className="row">
             <div className="col">
               <h2 data-aos="fade-right">
@@ -54,7 +59,7 @@ const AboutPage = () => {
               <img src={DecoIcon} alt="web-development" />
             </div>
             {'  '}
-            <div className="col" >
+            <div  style={{marginTop:"30vh"}} className="col" >
             <h2 data-aos="fade-left">
               {dictionary.AB02}
               </h2>
@@ -65,7 +70,8 @@ const AboutPage = () => {
           </div>
           <div className="row">
             <div style={{marginTop:"5vh"}} className="col" data-aos="fade-left">
-              <h2>{dictionary.AB03}</h2>
+              <p>{dictionary.AB03}</p>
+              <p>{dictionary.AB04}</p>
             </div>
             <div
               className="col"
@@ -93,7 +99,7 @@ const AboutPage = () => {
             >
               <img src={DecoIcon3} alt="web-development" />
             </div>
-            <div className="col" data-aos="fade-left">
+            <div  style={{marginTop:"20vh"}} className="col" data-aos="fade-left">
               <h2>{dictionary.AB05}</h2>
             </div>
           </div>

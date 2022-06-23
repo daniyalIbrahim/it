@@ -39,5 +39,18 @@
   "SO3DA":"IT-Bahn może pomóc w takich przypadkach. Zarówno przy projektowaniu efektywnej integracji IT w celu jak najlepszego wsparcia procesów biznesowych, jak i w temacie bezpieczeństwa informacji, jesteśmy do Państwa dyspozycji jako partner do kontaktów. Nasza metoda, nasze narzędzia i szablony są najlepiej dostosowane do Twoich potrzeb. Ponadto współpracujemy z partnerami biznesowymi w zakresie tematów specjalnych, aby opracować dla Ciebie optymalne rozwiązanie.",
   "SO4":"Rozwój oprogramowania",
   "SO4D":"Tworzymy oprogramowanie na zamówienie, aby rozwiązywać wyzwania, przed którymi stają firmy na drodze do sukcesu.",
-  "SO4DA":"Nasze najwyższej jakości usługi świadczymy dzięki połączeniu profesjonalnej pracy zespołowej z nowoczesnymi technologiami tworzenia oprogramowania. Nasz stos technologiczny spełnia wymagania nawet najbardziej wymagających projektów."
+  "SO4DA":"Nasze najwyższej jakości usługi świadczymy dzięki połączeniu profesjonalnej pracy zespołowej z nowoczesnymi technologiami tworzenia oprogramowania. Nasz stos technologiczny spełnia wymagania nawet najbardziej wymagających projektów.",
+  "MO1":"Świadczymy usługi najwyższej jakości, łącząc profesjonalną pracę zespołową z nowoczesnymi technologiami wytwarzania oprogramowania. Nasz stos technologiczny spełnia wymagania nawet najbardziej wymagających projektów.",
+  "MO2":"Podejście do realizacji",
+  "MO2D":"Podczas tworzenia oprogramowania na zamówienie przechodzimy przez kilka iteracji koncepcyjnych",
+  "MO3":"Mapowanie wymagań biznesowych",
+  "MO3D":"Aby opracować właściwy projekt rozwiązania i wizję produktu, nasi eksperci określają wyzwanie biznesowe lub szansę, potrzeby, cele, oczekiwania klienta, model dystrybucji, docelowych odbiorców i przepisy, które należy spełnić.",
+  "MO4":"Projektowanie UI i UX",
+  "MO4D":"Biorąc pod uwagę standardy branżowe i wzorce zachowań, Kapsys tworzy systemy projektowe składające się z komponentów wielokrotnego użytku. Można je łączyć ze sobą w celu zbudowania dowolnej liczby aplikacji i wprowadzania zmian na wszystkich poziomach systemu szybko i przy minimalnym wysiłku.",
+  "MO5":"Architektura rozwiązania",
+  "MO5D":"W dalszej części przedstawiamy ogólną wizję architektury. Szczegółowy, klikalny prototyp składa się z pełnego schematu rozwiązania wraz z listą wszystkich komponentów, infrastrukturą i integracjami.",
+  "MO6":"Proces rozwoju",
+  "MO6D":"Na tym etapie modelujemy cykl życia i sposób dostarczania oprogramowania. Na podstawie stworzonych systemów projektowych opracowujemy mapę techniczną, która przedstawia role, obowiązki, artefakty i procesy wymagane do wdrożenia rozwiązania.",
+  "MO7":"Wprowadzenie na rynek",
+  "MO7D":"Wraz z dostarczeniem projektu rozwiązania nasi eksperci rozpoczynają proces rozwoju, opracowują podręczniki oraz prowadzą szkolenia i treningi."
 }
