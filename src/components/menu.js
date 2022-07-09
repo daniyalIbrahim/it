@@ -189,7 +189,7 @@ function NavigationMenu() {
             <Link className="menu-item" to="/about" replace={pathname === '/about'}>
               {dictionary.about}
             </Link>
-            <Link className="menu-item" to="/our-services" replace={pathname === '/services'}>
+            <Link className="menu-item" to="/services" replace={pathname === '/services'}>
               {dictionary.services}
             </Link>
             <Link className="menu-item" to="/contact-us" replace={pathname === '/contact-us'}>
@@ -216,7 +216,7 @@ function NavigationMenu() {
               <Link className="men-item " to="/about" replace={pathname === '/about'}>
                 {dictionary.about}
               </Link>
-              <Link className="men-item " to="/our-services" replace={pathname === '/services'}>
+              <Link className="men-item " to="/services" replace={pathname === '/services'}>
                 {dictionary.services}
               </Link>
               <Link className="men-item " to="/contact-us" replace={pathname === '/contact-us'}>

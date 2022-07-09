@@ -16,7 +16,7 @@ export default function AppRouter() {
     <Suspense fallback={<div />}>
       <Routes>
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/our-services" element={<ServicesPage />} />
+        <Route path="/services" element={<ServicesPage />} />
         <Route path="/contact-us" element={<ContactPage />} />
 
         <Route path="/privacy-policy" element={<PrivacyPage />} />
