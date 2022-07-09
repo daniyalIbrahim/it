@@ -3,7 +3,8 @@ import { useThemeContext } from '../contexts/ThemeContext';
 import { css } from '@emotion/react';
 
 const LogoStyle = (colors, isLight) => css`
-  .small {
+
+.small {
     font: 13px sans-serif;
     font-color: white;
   }

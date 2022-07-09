@@ -1,0 +1,70 @@
+.anim-slide-in {
+    -webkit-animation: slideIn 1s forwards;
+    -moz-animation: slideIn 1s forwards;
+    animation: slideIn 1s forwards;
+}
+.anim-slide-out {
+    -webkit-animation: slideOut 1s backwards;
+    -moz-animation: slideOut 1s backwards;
+    animation: slideOut 1s backwards;
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        transform: translateX(400px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@-moz-keyframes slideIn {
+    0% {
+        transform: translateX(400px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(400px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(400px);
+    }
+}
+
+@-webkit-keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(400px);
+    }
+}
+
+@-moz-keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(400px);
+    }
+}

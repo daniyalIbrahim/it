@@ -61,7 +61,9 @@ const NewsLetterStyle = (colors, isLight) => css`
     height: 20px;
     margin-top:5px;
   }
-
+  p{
+    font-size: 14px;
+  }
 `;
 
 export default function NewsLetter() {

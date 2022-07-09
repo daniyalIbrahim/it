@@ -24,10 +24,7 @@ const HomePageStyle = (colors, isLight) => css`
     color: ${isLight ? 'inherit' : colors.gray[8]};
     fill: ${colors.gray[8]};
   }
-  .feed {
-    position: relative;
-    z-index: 999;
-  }
+
   @media (min-width: 768px) {
     .col{
       max-width:50%;
@@ -45,10 +42,9 @@ const HomePage = () => {
       <div css={[HomePageStyle(colors, isLight)]}>
         <div className='App-header'>
           <Logo ></Logo>
-
         </div>
         <main>
-          <h1 className="text-focus-in">{wish}</h1>
+          <FeedCards ></FeedCards>
           <h2><Text tid={"expertise"}></Text></h2>
           <br />
           <p>
@@ -59,7 +55,6 @@ const HomePage = () => {
           <br />
           <Motive />
           <br />
-          <FeedCards className="feed"></FeedCards>
           <hr />
           <NewsLetter ></NewsLetter>
           <br />

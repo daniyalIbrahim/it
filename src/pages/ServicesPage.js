@@ -32,8 +32,8 @@ const ServicesPage = () => {
 
           <br />
           <div className="row ">
-            <div className="col">
-              <h2>
+            <div className="col" id="S01">
+              <h2 >
                 <strong>{dictionary.SO1}</strong>
               </h2>
               <br />
@@ -71,7 +71,7 @@ const ServicesPage = () => {
               <img src={AppIcon} alt="mobile-app-development" />
             </div>
             <div className="col">
-              <h2>
+              <h2 id="S02">
                 <strong>{dictionary.SO2}</strong>
               </h2>
               <br />
@@ -85,7 +85,7 @@ const ServicesPage = () => {
           </div>
           <div className="row">
             <div className="col">
-              <h2>
+              <h2 id="S03">
                 <strong>{dictionary.SO3}</strong>
               </h2>
               <br />
@@ -124,7 +124,7 @@ const ServicesPage = () => {
               <img src={DelIcon} alt="e-commerce development" />
             </div>
             <div className="col">
-              <h2>
+              <h2 id="S04">
                 <strong>{dictionary.SO4}</strong>
               </h2>
               <br />

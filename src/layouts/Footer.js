@@ -13,7 +13,6 @@ const footerStyle = css`
   justify-content: center;
   & > nav {
     margin: 0 auto;
-    max-width: 1280px;
     display: flex;
     align-items: center;
     justify-content: space-between;
