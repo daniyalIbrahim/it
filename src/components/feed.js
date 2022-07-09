@@ -85,7 +85,7 @@ export default function Cards() {
                                 backgroundPosition: 'center',
                                 backgroundSize: 'contain',
                               }}
-                              href="#S04"
+                              href="/services"
                             >
                             <h1>{dictionary.SO4}</h1>
                            <p className="text">
@@ -100,7 +100,7 @@ export default function Cards() {
                                 backgroundPosition: 'center',
                                 backgroundSize: 'contain',
                               }}
-                              href="#S01"
+                              href="/services"
                             >
                             <h1>{dictionary.SO1}</h1>
                            <p className="text">
@@ -115,7 +115,7 @@ export default function Cards() {
                                 backgroundPosition: 'center',
                                 backgroundSize: 'contain',
                               }}
-                              href="#S02"
+                              href="/services"
                             >
                             <h1>{dictionary.SO2}</h1>
                            <p className="text">
@@ -129,7 +129,7 @@ export default function Cards() {
                                 backgroundPosition: 'center',
                                 backgroundSize: 'contain',
                               }}
-                              href="#S03"
+                              href="/services"
                             >
                             <h1>{dictionary.SO3}</h1>
                            <p className="text">
